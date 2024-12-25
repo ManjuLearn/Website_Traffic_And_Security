@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Website Traffic Analyzer</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="chart.js"></script>
+</head>
+<body>
+<button id="togglePanel">Toggle Side Panel</button>
+
+  <div id="themeToggle">
+    <button id="lightTheme">Light</button>
+    <button id="darkTheme">Dark</button>
+    <button id="autoTheme">Auto</button>
+  </div>
+  <h1>Advanced Website Traffic Analyzer</h1>
+  <div id="stats">
+    <p>Total Requests: <span id="totalRequests">0</span></p>
+    <p>Average Response Time: <span id="avgResponseTime">0</span> ms</p>
+    <p>Total Data Transferred: <span id="totalData">0</span> KB</p>
+  </div>
+  <div id="filters">
+    <label>Filter by type:</label>
+    <select id="typeFilter">
+      <option value="all">All</option>
+      <option value="main_frame">Main Frame</option>
+      <option value="sub_frame">Sub Frame</option>
+      <option value="stylesheet">Stylesheet</option>
+      <option value="script">Script</option>
+      <option value="image">Image</option>
+      <option value="font">Font</option>
+      <option value="object">Object</option>
+      <option value="xmlhttprequest">XHR</option>
+      <option value="ping">Ping</option>
+      <option value="csp_report">CSP Report</option>
+      <option value="media">Media</option>
+      <option value="websocket">WebSocket</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <canvas id="requestChart"></canvas>
+  <h2>Per-Domain Statistics</h2>
+  <div id="domainStats"></div>
+  <button id="viewCookies">View Cookies</button>
+  <div id="cookieInfo" style="display: none;">
+    <h3>Cookie Information</h3>
+    <div id="cookieList"></div>
+  </div>
+  <button id="clearStats">Clear Stats</button>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
